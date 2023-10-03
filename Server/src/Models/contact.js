@@ -1,24 +1,28 @@
-const { Datatypes } = require("sequelize");
+const { DataTypes } = require('sequelize')
 
-module.exports = (sequelize) => {
-    sequelize.define("contact", {
-        id: {
-            type: Datatypes.UUID,
-            defaultValue: Datatypes.UUIDV4,
+module.exports = (sequelize) =>{
+    sequelize.define('contact',{
+        id:{
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
             allowNull: false
         },
-        name: {
-            type: Datatypes.STRING,
-            allowNull: false
+        name:{
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-        description: {
-            type: Datatypes.TEXT,
+        lastName:{
+            type: DataTypes.STRING,
             allowNull: false
         },
         email: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        description: {
+            type: DataTypes.TEXT,
             allowNull: false
         }
-    })
+    }, {updatedAt: false})
 }
