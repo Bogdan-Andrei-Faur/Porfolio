@@ -3,9 +3,9 @@
 ## 📌 Variables de entorno
 
 ```
-DB_USER=
-DB_PASSWORD=
-DB_HOST=
+DB_USER=User
+DB_PASSWORD=01234
+DB_HOST=localhost
 ```
 
 
