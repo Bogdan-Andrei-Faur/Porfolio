@@ -1,6 +1,8 @@
 import React from "react";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { BiSolidFilePdf } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function ProfileCard () {
     return (
@@ -34,8 +36,17 @@ export default function ProfileCard () {
                 </div>
 
                 <div className="flex flex-row text-zinc-200 text-center justify-center">
-                    <FaGithubSquare className="m-1 w-8 h-8"/>
-                    <FaLinkedin className="m-1 w-8 h-8"/>
+                    <Link to="https://drive.google.com/file/d/1huLdSeHquzzEq7l_JEkftz0bnhPbyv5o/view?usp=sharing" target="_blank">
+                        <BiSolidFilePdf className="m-1 w-8 h-8"/>
+                    </Link>
+
+                    <Link to="https://github.com/Bogdan-Andrei-Faur" target="_blank">
+                        <FaGithubSquare className="m-1 w-8 h-8"/>
+                    </Link>
+
+                    <Link to="https://www.linkedin.com/in/bogdan-andrei-faur/" target="_blank">
+                        <FaLinkedin className="m-1 w-8 h-8"/>
+                    </Link>
                 </div>
             </div>
         </div>
