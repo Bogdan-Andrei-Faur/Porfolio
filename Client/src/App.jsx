@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileCard from "./Components/ProfileCard.jsx";
 import AboutMe from "./Components/AboutMe.jsx";
+import Projecs from "./Components/Projects.jsx";
 
 function App() {
   return (
@@ -8,8 +9,13 @@ function App() {
       <div>
         <ProfileCard/>
       </div>
+
       <div>
         <AboutMe/>
+      </div>
+
+      <div>
+        <Projecs/>
       </div>
     </div>
   )
