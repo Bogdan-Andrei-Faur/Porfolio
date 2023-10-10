@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useRef, useState} from "react";
+import { MdArrowCircleLeft, MdArrowCircleRight } from "react-icons/md";
 
 export default function AboutMe () {
+    const slider = useRef();
+    const [activeTab, setActiveTab] = useState("projects");
+    const images = [...Array(4).keys()];
+
     return (
-        <div className="bg-[#011522] m-10 rounded-3xl shadow-none transition-shadow shadow-black hover:shadow-2xl text-center">
+        <div className="bg-[#011522] m-10 pb-2 rounded-3xl shadow-none transition-shadow shadow-black hover:shadow-2xl text-center">
             <div className="flex items-center p-2">
                 <div className="px-1">
                     <span className="inline-block items-center w-3 h-3 p-1 rounded-full bg-[#ff605c]"></span>
@@ -17,55 +22,88 @@ export default function AboutMe () {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center">
-                <div className="relative flex flex-wrap bg-[#EEE] box-border shadow-[0_0_0px_1px_rgba(0,0,0,0.06)] w-[300px] text-sm p-1 rounded-lg">
-                    <label className="flex-auto text-center">
-                        <input type="radio" name="radio" className="hidden"/>
-                        <span className="flex cursor-pointer items-center justify-center text-slate-700 transition-all duration-[0.15s] ease-[ease-in-out] px-0 py-2 rounded-lg border-[none]"
-                        >HTML</span>
-                    </label>
-                
-                    <label className="flex-auto text-center">
-                        <input type="radio" name="radio" className="hidden"/>
-                        <span className="flex cursor-pointer items-center justify-center text-slate-700 transition-all duration-[0.15s] ease-[ease-in-out] px-0 py-2 rounded-lg border-[none]"
-                        >React</span>
-                    </label>
-                
-                    <label class="radio" className="flex-auto text-center">
-                        <input type="radio" name="radio" className="hidden"/>
-                        <span className="flex cursor-pointer items-center justify-center text-slate-700 transition-all duration-[0.15s] ease-[ease-in-out] px-0 py-2 rounded-lg border-[none]"
-                        >Vue</span>
-                    </label>
+            <div className="bg-zinc-800 mx-4 mb-2 p-2 rounded-2xl">
+                <div className="flex justify-start text-zinc-200">
+                    {activeTab === "projects" ? (
+                        <div>
+                            <button className="bg-zinc-500 py-2 px-4 rounded-t-2xl"
+                                    onClick={() => setActiveTab("projects")}
+                            >Proyectos personales</button>
+                        </div>
+                    ) : (
+                        <div>
+                            <button className="bg-zinc-700 ml-2 py-2 px-4 rounded-t-2xl"
+                                    onClick={() => setActiveTab("projects")}
+                            >Proyectos personales</button>
+                        </div>
+                    )}
+
+                    {activeTab === "developing" ? (
+                        <div>
+                            <button className="bg-zinc-500 mx-2 py-2 px-4 rounded-t-2xl"
+                                    onClick={() => setActiveTab("developing")}
+                            >Proyectos personales</button>
+                        </div>
+                    ) : (
+                        <div>
+                            <button className="bg-zinc-700 mx-2 py-2 px-4 rounded-t-2xl"
+                                    onClick={() => setActiveTab("developing")}
+                            >Proyectos personales</button>
+                        </div>
+                    )}
+
+                    {activeTab === "contributions" ? (
+                        <div>
+                            <button className="bg-zinc-500 mr-2 py-2 px-4 rounded-t-2xl"
+                                    onClick={() => setActiveTab("contributions")}
+                            >Proyectos personales</button>
+                        </div>
+                    ) : (
+                        <div>
+                            <button className="bg-zinc-700 mr-2 py-2 px-4 rounded-t-2xl"
+                                    onClick={() => setActiveTab("contributions")}
+                            >Proyectos personales</button>
+                        </div>
+                    )}
                 </div>
-            </div>
 
-            <div class="flex items-center space-x-4">
-                <input type="radio" id="option1" name="option" value="option1" class="hidden"/>
-                <label for="option1" class="flex items-center cursor-pointer">
-                    <span class="w-4 h-4 mr-2 inline-block rounded-full border border-gray-300"></span>
-                    Option 1
-                </label>
+                <div className="p-4">
+                    {activeTab === "projects" ? (
+                        <div>
+                            <h2 className="text-white">Tab 1</h2>
 
-                <input type="radio" id="option2" name="option" value="option2" class="hidden"/>
-                <label for="option2" class="flex items-center cursor-pointer">
-                    <span class="w-4 h-4 mr-2 inline-block rounded-full border border-gray-300"></span>
-                    Option 2
-                </label>
+                            <div className='mx-24'>
+                                <div className='flex items-center justify-center w-full h-full '>
 
-                <input type="radio" id="option3" name="option" value="option3" class="hidden"/>
-                <label for="option3" class="flex items-center cursor-pointer">
-                    <span class="w-4 h-4 mr-2 inline-block rounded-full border border-gray-300"></span>
-                    Option 3
-                </label>
-            </div>
+                                    <button className='mx-2 text-4xl text-zinc-200' onClick={() => slider.current.scrollLeft -= 1017}>
+                                        <MdArrowCircleLeft/>
+                                    </button>
 
-            <div className="m-2 px-3 pb-3">
-                <h2 className="text-zinc-300 font-jetbrains text-2xl border-b-2 border-zinc-300">Sobre mi</h2>
-                <br />
-                <p className="text-zinc-300 font-jetbrains text-left"
-                >Desarrollador full-stack, especializado en front-end.
-                Gran parte de mi vida se ha enfocado en distintas ramas de la tecnología,
-                aparte me gusta el mundo automobilistico, el deporte, viajar y los videojuegos.</p>
+                                    <div ref={slider} class='snap-x overflow-scroll scroll-smooth flex items-center justify-start h-[600px] w-[1017px]'>
+                                        <video className="rounded-lg" src="/src/assets/Projects/VideogamesPI/Video.mp4" width="1017" height="575" controls muted loop/>
+                                        {images.map((e, i) => (
+                                            <div key={i} className='snap-start flex flex-shrink-0 w-auto'>
+                                                <img src={`/src/assets/Projects/VideogamesPI/Cap-${i}.png`} alt="" className='rounded-lg object-cover object-center w-[1017px] h-[575px]' />
+                                            </div>
+                                        ))}
+                                    </div>
+                            
+                                    <button className='mx-2 text-4xl text-zinc-200' onClick={() => slider.current.scrollLeft += 1017}>
+                                        <MdArrowCircleRight/>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ) : activeTab === "developing" ? (
+                        <div>
+                            <h2 className="text-white">Tab 2</h2>
+                        </div>
+                    ) : activeTab === "contributions" ? (
+                        <div>
+                            <h2 className="text-white">Tab 3</h2>
+                        </div>
+                    ) : null}
+                </div>
             </div>
         </div>
         
