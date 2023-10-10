@@ -1,5 +1,7 @@
 import React, { useRef, useState} from "react";
 import { MdArrowCircleLeft, MdArrowCircleRight } from "react-icons/md";
+import { FaGithubSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function AboutMe () {
     const slider = useRef();
@@ -70,7 +72,7 @@ export default function AboutMe () {
                 <div className="p-4">
                     {activeTab === "projects" ? (
                         <div>
-                            <h2 className="text-white">Tab 1</h2>
+                            <h2 className="text-zinc-300 font-jetbrains text-2xl">Videogames PI</h2>
 
                             <div className='mx-24'>
                                 <div className='flex items-center justify-center w-full h-full '>
@@ -92,6 +94,24 @@ export default function AboutMe () {
                                         <MdArrowCircleRight/>
                                     </button>
                                 </div>
+                            </div>
+
+                            <p className="text-zinc-300 font-jetbrains text-left"
+                            >Videogames PI (Proyecto Individual), se trata de un proyecto que tuve que realizar cuando estaba en el bootcamp "SoyHenry",
+                            es una biblioteca de videojuegos.</p>
+                            <br />
+                            <p className="text-zinc-300 font-jetbrains text-left"
+                            >Se utiliza una api llamada <a className="text-blue-700 underline" href="https://rawg.io/" target="_blank">Rawg</a>,
+                            también se pueden guardar nuevos videojuegos a traves de un formulario, estos se almacenaran en la base de datos.</p>
+                            <br />
+                            <p className="text-zinc-300 font-jetbrains text-left"
+                            >La pagina cuenta con búsqueda por nombre, orden alfabetico y rating, filtrado por genero y por base de datos o api.</p>
+                            <br />
+                            <div className="flex">
+                                <h3 className="text-zinc-300 font-jetbrains text-lg">Link del repositorio: </h3>
+                                <Link to="https://github.com/Bogdan-Andrei-Faur/PI-Videogames-main" target="_blank">
+                                    <FaGithubSquare className="text-zinc-300 text-3xl mx-2"/>
+                                </Link>
                             </div>
                         </div>
                     ) : activeTab === "developing" ? (
