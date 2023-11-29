@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function ProfileCard () {
     const handleCopy = (text) => {
+        alert("Copiado!!!")
         const el = document.createElement('textarea');
         el.value = text;
         el.setAttribute('readonly', '');
@@ -30,48 +31,38 @@ export default function ProfileCard () {
       };
 
     return (
-        <div className="bg-[#011522] m-10 rounded-3xl shadow-none transition-shadow shadow-black hover:shadow-2xl text-center">
-            <div className="flex items-center p-2">
-                <div className="px-1">
-                    <span className="inline-block items-center w-3 h-3 p-1 rounded-full bg-[#ff605c]"></span>
-                </div>
-                
-                <div className="px-1">
-                    <span className="inline-block items-center w-3 h-3 p-1 rounded-full bg-[#ffbd44]"></span>
-                </div>
-                
-                <div className="px-1">
-                    <span className="inline-block items-center w-3 h-3 p-1 rounded-full bg-[#00ca4e]"></span>
-                </div>
-            </div>
-            
-            <div className="flex flex-col p-5 text-center justify-center">
-                <img className="w-52 rounded-full mx-auto"
-                    src="./src/assets/andrei.jpg"
-                    alt="Bogdan Andrei Faur" />
+        <div className="mx-5 my-5 max-lg:mb-5 flex max-w-screen-sm items-center justify-center">
+            <div className="w-full rounded-3xl bg-gradient-to-r from-indigo-500 from-20% via-sky-500 via-50% to-emerald-500 to-90% ... p-2">
+                <div className="flex flex-col h-full w-full rounded-2xl items-center justify-center bg-gray-800 back px-4 py-6">
+                    <img className="w-52 rounded-full mx-auto p-2 bg-gradient-to-r from-indigo-500 from-20% via-sky-500 via-50% to-emerald-500 to-90% ..."
+                         src="./src/assets/andrei.jpg"
+                         alt="Bogdan Andrei Faur" />
                     
-                <h2 className="text-zinc-300 mt-5 font-jetbrains"
-                >Bogdan Andrei Faur</h2>
+                    <h1 className="text-zinc-300 mt-5 font-jetbrains"
+                    >Bogdan Andrei Faur</h1>
 
-                <div className="flex items-center border-y-[1px] border-zinc-500 my-3">
-                    <MdEmail className="text-zinc-200 w-8 h-8 mr-1"
-                        onClick={() => handleCopy('Bogdan.andrei.Faur@gmail.com')}/>
-                    <h2 className="text-zinc-300 my-5 font-jetbrains"
-                    >Bogdan.andrei.Faur@gmail.com</h2>
-                </div>
+                    <div className="flex items-center border-y-[1px] border-zinc-500 my-3">
+                        <MdEmail className="text-zinc-200 w-8 h-8 mr-1"
+                                 onClick={() => handleCopy('Bogdan.andrei.Faur@gmail.com')}
+                                 cursor="pointer"/>
+                        <h2 className="text-zinc-300 my-5 font-jetbrains"
+                            onClick={() => handleCopy('Bogdan.andrei.Faur@gmail.com')}
+                        >Bogdan.andrei.Faur@gmail.com</h2>
+                    </div>
 
-                <div className="flex flex-row text-zinc-200 text-center justify-center">
-                    <Link to="https://drive.google.com/file/d/1ToHoloaKWe9_q8novk6Z-1MGtlncKudA/view?usp=sharing" target="_blank">
-                        <BiSolidFilePdf className="m-1 w-8 h-8"/>
-                    </Link>
+                    <div className="flex flex-row text-zinc-200 text-center justify-center">
+                        <Link to="https://drive.google.com/file/d/1ToHoloaKWe9_q8novk6Z-1MGtlncKudA/view?usp=sharing" target="_blank">
+                            <BiSolidFilePdf className="m-1 w-8 h-8"/>
+                        </Link>
 
-                    <Link to="https://github.com/Bogdan-Andrei-Faur" target="_blank">
-                        <FaGithubSquare className="m-1 w-8 h-8"/>
-                    </Link>
+                        <Link to="https://github.com/Bogdan-Andrei-Faur" target="_blank">
+                            <FaGithubSquare className="m-1 w-8 h-8"/>
+                        </Link>
 
-                    <Link to="https://www.linkedin.com/in/bogdan-andrei-faur/" target="_blank">
-                        <FaLinkedin className="m-1 w-8 h-8"/>
-                    </Link>
+                        <Link to="https://www.linkedin.com/in/bogdan-andrei-faur/" target="_blank">
+                            <FaLinkedin className="m-1 w-8 h-8"/>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
