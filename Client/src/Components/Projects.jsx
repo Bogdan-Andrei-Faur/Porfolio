@@ -3,6 +3,14 @@ import { MdArrowCircleLeft, MdArrowCircleRight } from "react-icons/md";
 import { FaGithubSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import videoVideogames from "/src/assets/Projects/VideogamesPI/Video.mp4";
+import imageVideogames0 from "/src/assets/Projects/VideogamesPI/Cap-0.png"
+import imageVideogames1 from "/src/assets/Projects/VideogamesPI/Cap-1.png"
+import imageVideogames2 from "/src/assets/Projects/VideogamesPI/Cap-2.png"
+import imageVideogames3 from "/src/assets/Projects/VideogamesPI/Cap-3.png"
+
+import videoCaravanaSocial from "/src/assets/Projects/CaravanaSocial/CaravanaSocial.mp4";
+
 export default function AboutMe () {
     const slider = useRef();
     const [activeTab, setActiveTab] = useState("projects");
@@ -67,20 +75,19 @@ export default function AboutMe () {
                                         <h2 className="text-zinc-300 font-jetbrains text-2xl">Videogames PI</h2>
                                         <div>
                                             <div className='flex items-center justify-center w-full h-full '>
-                                                <button className='mx-2 text-4xl text-indigo-500' onClick={() => slider.current.scrollLeft -= 1017}>
+                                                <button className='mx-2 text-4xl text-indigo-500' onClick={() => slider.current.scrollLeft -= 854}>
                                                     <MdArrowCircleLeft/>
                                                 </button>
 
                                                 <div ref={slider} className='snap-x snap-start overflow-x-scroll scroll-smooth flex items-center justify-start w-[854px] h-[480px] max-lg:w-[256px] max-lg:h-[144px]'>
-                                                    <video className="rounded-xl bg-contain m-0 p-0" src="/src/assets/Projects/VideogamesPI/Video.mp4" controls muted loop/>
-                                                    {images.map((e, i) => (
-                                                        <div key={i} className='snap-start flex flex-shrink-0 w-auto m-0 p-0'>
-                                                            <img src={`/src/assets/Projects/VideogamesPI/Cap-${i}.png`} alt="" className='m-0 p-0 rounded-xl object-center w-[854px] h-[480px] max-lg:w-[256px] max-lg:h-[144px] bg-contain' />
-                                                        </div>
-                                                    ))}
+                                                    <video className="rounded-xl bg-contain m-0 p-0" src={videoVideogames} controls muted loop/>
+                                                    <img src={imageVideogames0} alt="" className='m-0 p-0 rounded-xl object-center w-[854px] h-[480px] max-lg:w-[256px] max-lg:h-[144px] bg-contain' />
+                                                    <img src={imageVideogames1} alt="" className='m-0 p-0 rounded-xl object-center w-[854px] h-[480px] max-lg:w-[256px] max-lg:h-[144px] bg-contain' />
+                                                    <img src={imageVideogames2} alt="" className='m-0 p-0 rounded-xl object-center w-[854px] h-[480px] max-lg:w-[256px] max-lg:h-[144px] bg-contain' />
+                                                    <img src={imageVideogames3} alt="" className='m-0 p-0 rounded-xl object-center w-[854px] h-[480px] max-lg:w-[256px] max-lg:h-[144px] bg-contain' />
                                                 </div>
                             
-                                                <button className='mx-2 text-4xl text-emerald-500' onClick={() => slider.current.scrollLeft += 1017}>
+                                                <button className='mx-2 text-4xl text-emerald-500' onClick={() => slider.current.scrollLeft += 854}>
                                                     <MdArrowCircleRight/>
                                                 </button>
                                             </div>
@@ -117,7 +124,7 @@ export default function AboutMe () {
                                         <h2 className="text-zinc-300 font-jetbrains text-2xl">En Desarrollo</h2>
                                         <div>
                                             <div className='flex items-center justify-center w-full h-full '>
-                                                <button className='mx-2 text-4xl text-indigo-500' onClick={() => slider.current.scrollLeft -= 1017}>
+                                                <button className='mx-2 text-4xl text-indigo-500' onClick={() => slider.current.scrollLeft -= 854}>
                                                     <MdArrowCircleLeft/>
                                                 </button>
 
@@ -130,7 +137,7 @@ export default function AboutMe () {
                                                     ))}
                                                 </div>
                             
-                                                <button className='mx-2 text-4xl text-emerald-500' onClick={() => slider.current.scrollLeft += 1017}>
+                                                <button className='mx-2 text-4xl text-emerald-500' onClick={() => slider.current.scrollLeft += 854}>
                                                     <MdArrowCircleRight/>
                                                 </button>
                                             </div>
@@ -167,7 +174,7 @@ export default function AboutMe () {
                                         <h2 className="text-zinc-300 font-jetbrains text-2xl">Caravana Social</h2>
                                         <div>
                                             <div className='flex items-center justify-center w-full h-full '>
-                                            <video className="rounded-xl bg-contain m-0 p-0" src="/src/assets/Projects/CaravanaSocial/CaravanaSocial.mp4" controls muted loop/>
+                                                <video className="rounded-xl bg-contain m-0 p-0" src={videoCaravanaSocial} controls muted loop/>
                                             </div>
                                         </div>
 
