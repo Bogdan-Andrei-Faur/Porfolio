@@ -3,6 +3,7 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiSolidFilePdf } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import foto from "/src/assets/andrei.jpg";
 
 export default function ProfileCard () {
     const handleCopy = (text) => {
@@ -35,7 +36,7 @@ export default function ProfileCard () {
             <div className="w-full rounded-3xl bg-gradient-to-r from-indigo-500 from-20% via-sky-500 via-50% to-emerald-500 to-90% ... p-2">
                 <div className="flex flex-col h-full w-full rounded-2xl items-center justify-center bg-gray-800 back px-4 py-6">
                     <img className="w-52 rounded-full mx-auto p-2 bg-gradient-to-r from-indigo-500 from-20% via-sky-500 via-50% to-emerald-500 to-90% ..."
-                         src="./src/assets/andrei.jpg"
+                         src={foto}
                          alt="Bogdan Andrei Faur" />
                     
                     <h1 className="text-zinc-300 mt-5 font-jetbrains"
