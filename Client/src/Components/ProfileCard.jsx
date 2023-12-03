@@ -52,7 +52,7 @@ export default function ProfileCard () {
                     </div>
 
                     <div className="flex flex-row text-zinc-200 text-center justify-center">
-                        <Link to="https://drive.google.com/file/d/19GmXAF4nl3c0PuehJO14_C-pixQ1VAau/view?usp=sharing" target="_blank">
+                        <Link to="https://drive.google.com/file/d/1EjkwkH9S4xbzRGHwbEprMsYeDkl5wpD-/view?usp=sharing" target="_blank">
                             <BiSolidFilePdf className="m-1 w-8 h-8"/>
                         </Link>
 
