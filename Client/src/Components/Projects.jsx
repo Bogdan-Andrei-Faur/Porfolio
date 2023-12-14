@@ -99,10 +99,10 @@ export default function AboutMe () {
 
                                         <p className="text-zinc-300 font-jetbrains text-left max-lg:text-sm mb-5"
                                         >Se utiliza una api llamada <a className="text-blue-700 underline" href="https://rawg.io/" target="_blank">Rawg</a>,
-                                        también se pueden guardar nuevos videojuegos a traves de un formulario, estos se almacenaran en la base de datos.</p>
+                                        también se pueden guardar nuevos videojuegos a través de un formulario, estos se almacenarán en la base de datos.</p>
                                     
                                         <p className="text-zinc-300 font-jetbrains text-left max-lg:text-sm mb-5"
-                                        >La pagina cuenta con búsqueda por nombre, orden alfabetico y rating, filtrado por genero y por base de datos o api.</p>
+                                        >La página cuenta con búsqueda por nombre, orden alfabético y rating, filtrado por género y por base de datos o api.</p>
 
                                         <div className="flex">
                                             <h3 className="text-zinc-300 font-jetbrains text-lg">Link del repositorio: </h3>

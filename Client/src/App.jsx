@@ -9,13 +9,13 @@ function App() {
     <div className="flex flex-col justify-center text-center relative">
       <div className="flex flex-row max-lg:flex-wrap justify-center">
         <ProfileCard/>
-        <AboutMe/>
+
+        <div className="flex flex-col justify-center">
+          <AboutMe/>
+          <Technologies/>
+        </div>
       </div>
       
-      <div className="flex justify-center">
-        <Technologies/>
-      </div>
-
       <div className="flex justify-center">
         <Projecs/>
       </div>
